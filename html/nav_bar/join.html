@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>회원가입 페이지</title>
+    <script src="https://kit.fontawesome.com/2c79960a52.js" crossorigin="anonymous"></script>
+    
+    <style>
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            
+            <a href="#">GEONHUI GALLERY</a>
+
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="">EXHIBITION</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="about.html">GALLERY</a></li>
+            <li><a href="sub1.html">LOGIN</a></li>
+        </ul>
+
+        <ul class="navbar__icons">
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-instagram-square"></i></li>
+        </ul>
+
+        <a href="#" class="navbar__toggleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <section>
+        <div class="Section2">
+            <form action="#" method="post" >
+                <h1>회원가입</h1>
+                <hr>
+                <fieldset class="Form2" >
+                    <legend>필수 입력 사항</legend>
+                    <p>
+                    이름 :<input type="text" name="joinname" class="joinname"><br>
+                    </p>
+                    <p>
+                    이메일 :<input type="text" name="joinem" class="joinname"><br>
+                    </p>
+                    <p>   
+                    아이디:<input type="text" name="joinid" class="joinname"><br>
+                    </p>    
+                    <p>
+                    비밀번호 :<input type="text" name="joinpw" class="joinname"><br>
+                    </p> 
+                    <p>
+                    비밀번호 재확인 :<input type="text" name="joinpw" class="joinname"><br>
+                    </p>
+                    <p>
+                    성별: 남자 <input type="radio" name="male" id="">
+                            여자 <input type="radio" name="female" id=""> 
+                        </p> 
+                    
+                </fieldset>
+                <div class="Section3">
+                    <input type="button" value="회원가입">
+                    <input type="button" value="초기화">
+                </div>
+            </form>
+            
+        
+        </div>   
+    </section>
+
+    <script>
+        let btn = document.querySelector(".btn");
+        btn.addEventListener("click", Login);
+        function Login(){
+        let id=document.querySelector("#userid").value;
+        if(id==""){
+            alert("아이디를 입력하세요.");
+            document.querySelector("#userid").focus();
+            
+        }
+        let pw=document.querySelector("#userpw").value;
+        if(pw==""){
+            alert("비밀번호를 입력하세요.");
+            document.querySelector("#userpw").focus();
+            
+        }
+        if(id>=2 &&pw>=2){
+            alert("로그인이 되었습니다.");
+            
+        }
+
+    }
+    </script>
+    
+    <footer>
+        <div id="Footer">
+            <div class="Footer1">
+                LEEGEONHUI GALLERY         privacy policy
+            </div>
+            <div class="Footer2">
+                708, Jungang-daero, Busanjin-gu, Busan, Republic of Korea | +82 4162 8337
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
